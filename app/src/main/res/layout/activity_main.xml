@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginLeft="16dp"
+        android:padding="32dp"
+        tools:background="@android:color/holo_green_light"
+        android:text="@string/dev_name" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="7sp"
+        android:textColor="@color/teal_700"
+        android:textSize="20sp"
+        android:gravity="right"
+        android:textStyle="normal"
+        tools:text="Login to your accountLogin to your accountLogin to your account" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:drawableLeft="@drawable/ic_round_person_24"
+            android:text="Vassilis " />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_weight="2"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:drawableLeft="@drawable/ic_round_person_24"
+            android:text="Vassilis " />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="54dp"
+        android:src="@drawable/ic_round_person_24"
+        android:layout_height="54dp"/>
+
+
+
+    <EditText
+        android:layout_margin="16dp"
+        android:hint="@string/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
