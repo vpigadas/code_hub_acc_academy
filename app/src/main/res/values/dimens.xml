@@ -1,4 +1,5 @@
 <resources>
     <dimen name="space_16">16dp</dimen>
     <dimen name="text_16">16sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>
