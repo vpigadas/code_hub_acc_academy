@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeHubAcademy">
         <activity
-            android:name=".MainActivity2"
+            android:name=".Demo"
             android:label="@string/title_activity_main2"
             android:theme="@style/Theme.CodeHubAcademy.NoActionBar"></activity>
-        <activity android:name=".Demo">
+        <activity android:name=".MainActivity2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
