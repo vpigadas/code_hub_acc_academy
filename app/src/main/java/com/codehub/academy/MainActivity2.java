@@ -75,7 +75,7 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     private void buttonFunction() {
-        Intent intent = new Intent(MainActivity2.this, Demo.class);
+        Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
 
         Bundle parameter = new Bundle();
         parameter.putInt("keyInt", 1000);
@@ -88,7 +88,7 @@ public class MainActivity2 extends AppCompatActivity {
     private void buttonFunction2(@NonNull String name) {
 
 
-        Intent intent = new Intent(MainActivity2.this, Demo.class);
+        Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
         startActivityForResult(intent, 5001);
     }
 
