@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeHubAcademy">
-        <activity android:name=".MainActivity3"></activity>
+        <activity android:name=".cource6.Main6Activity"></activity>
+        <activity
+            android:name=".course5.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.CodeHubAcademy.NoActionBar" />
+        <activity android:name=".MainActivity3" />
         <activity
             android:name=".Demo"
             android:label="@string/title_activity_main2"
