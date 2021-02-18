@@ -7,6 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.codehub.academy.R;
+import com.codehub.academy.recyclerview.model.Model;
+import com.codehub.academy.recyclerview.model.Model1;
+import com.codehub.academy.recyclerview.model.Model2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +41,15 @@ public class RecyclerActivity extends AppCompatActivity {
         array.add("C");
         array.add("D");
         array.add("E");
+
+        return array;
+    }
+
+    private List<Model> getMockData2(){
+        List<Model> array = new ArrayList();
+
+        array.add(new Model1("A","B"));
+        array.add(new Model2(0,1));
 
         return array;
     }
