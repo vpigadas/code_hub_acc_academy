@@ -7,12 +7,14 @@ public class UserModel {
 
     private String firstName;
     private String lastName;
+    private String password;
     private String bio;
     private Date dob;
 
-    public UserModel(String firstName, String lastName, String bio, Date dob) {
+    public UserModel(String firstName, String lastName,String password, String bio, Date dob) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.password = password;
         this.bio = bio;
         this.dob = dob;
     }
@@ -35,6 +37,14 @@ public class UserModel {
 
     public String getBio() {
         return bio;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setBio(String bio) {
