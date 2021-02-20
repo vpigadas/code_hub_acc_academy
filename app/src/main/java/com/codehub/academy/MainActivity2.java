@@ -57,7 +57,7 @@ public class MainActivity2 extends AppCompatActivity {
         btTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity2.this, MainActivity.class);
+                Intent intent = new Intent(MainActivity2.this, ViewPagerActivity.class);
                 startActivity(intent);
             }
         });

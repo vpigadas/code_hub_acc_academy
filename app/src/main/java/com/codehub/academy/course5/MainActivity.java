@@ -55,21 +55,21 @@ public class MainActivity extends AppCompatActivity {
     private List<UserModel> getMockUserList() {
         List<UserModel> array = new ArrayList<UserModel>();
 
-        array.add(new UserModel("Vassilis", "Pigadas", "blablablablablabla", new Date(System.currentTimeMillis())));
-        array.add(new UserModel("Markos", "Pigadas", "blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla", new Date(System.currentTimeMillis())));
-        array.add(new UserModel("Orfeas", "Pigadas", "blablablablablabla", new Date(System.currentTimeMillis())));
-        array.add(new UserModel("Nikos", "Pigadas", "blabla", new Date(System.currentTimeMillis())));
-        array.add(new UserModel("Christos", "Emmanouil", "blabla", new Date(System.currentTimeMillis())));
-        array.add(new UserModel("Vassilis", "Pigadas", "blablablablablabla", new Date(System.currentTimeMillis())));
-        array.add(new UserModel("Markos", "Pigadas", "blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla", new Date(System.currentTimeMillis())));
-        array.add(new UserModel("Orfeas", "Pigadas", "blablablablablabla", new Date(System.currentTimeMillis())));
-        array.add(new UserModel("Nikos", "Pigadas", "blabla", new Date(System.currentTimeMillis())));
-        array.add(new UserModel("Christos", "Emmanouil", "blabla", new Date(System.currentTimeMillis())));
-        array.add(new UserModel("Vassilis", "Pigadas", "blablablablablabla", new Date(System.currentTimeMillis())));
-        array.add(new UserModel("Markos", "Pigadas", "blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla", new Date(System.currentTimeMillis())));
-        array.add(new UserModel("Orfeas", "Pigadas", "blablablablablabla", new Date(System.currentTimeMillis())));
-        array.add(new UserModel("Nikos", "Pigadas", "blabla", new Date(System.currentTimeMillis())));
-        array.add(new UserModel("Christos", "Emmanouil", "blabla", new Date(System.currentTimeMillis())));
+        array.add(new UserModel("Vassilis", "Pigadas", "blablablablablabla", "", new Date(System.currentTimeMillis())));
+        array.add(new UserModel("Markos", "Pigadas", "", "blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla", new Date(System.currentTimeMillis())));
+        array.add(new UserModel("Orfeas", "Pigadas", "", "blablablablablabla", new Date(System.currentTimeMillis())));
+        array.add(new UserModel("Nikos", "Pigadas", "", "blabla", new Date(System.currentTimeMillis())));
+        array.add(new UserModel("Christos", "Emmanouil", "", "blabla", new Date(System.currentTimeMillis())));
+        array.add(new UserModel("Vassilis", "Pigadas", "", "blablablablablabla", new Date(System.currentTimeMillis())));
+        array.add(new UserModel("Markos", "Pigadas", "", "blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla", new Date(System.currentTimeMillis())));
+        array.add(new UserModel("Orfeas", "Pigadas", "", "blablablablablabla", new Date(System.currentTimeMillis())));
+        array.add(new UserModel("Nikos", "Pigadas", "", "blabla", new Date(System.currentTimeMillis())));
+        array.add(new UserModel("Christos", "Emmanouil", "", "blabla", new Date(System.currentTimeMillis())));
+        array.add(new UserModel("Vassilis", "Pigadas", "", "blablablablablabla", new Date(System.currentTimeMillis())));
+        array.add(new UserModel("Markos", "Pigadas", "", "blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla", new Date(System.currentTimeMillis())));
+        array.add(new UserModel("Orfeas", "Pigadas", "", "blablablablablabla", new Date(System.currentTimeMillis())));
+        array.add(new UserModel("Nikos", "Pigadas", "", "blabla", new Date(System.currentTimeMillis())));
+        array.add(new UserModel("Christos", "Emmanouil", "", "blabla", new Date(System.currentTimeMillis())));
 
         return array;
     }

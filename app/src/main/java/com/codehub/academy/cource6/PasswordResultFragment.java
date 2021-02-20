@@ -16,6 +16,7 @@ import com.codehub.academy.R;
 public class PasswordResultFragment extends Fragment {
 
     private UserProfileViewModel viewFragment;
+    private TvProgramViewModel viewModel;
 
     public PasswordResultFragment() {
         // Required empty public constructor
@@ -32,6 +33,8 @@ public class PasswordResultFragment extends Fragment {
 
         viewFragment = new ViewModelProvider(getActivity()).get(UserProfileViewModel.class);
         viewFragment.setUserName("Vassilis");
+
+        viewModel = new ViewModelProvider(this).get(TvProgramViewModel.class);
     }
 
     @Override
@@ -46,5 +49,38 @@ public class PasswordResultFragment extends Fragment {
 
         TextView textView = view.findViewById(R.id.txt);
 
+        viewModel.retrieveProgram(new TvProgramListener() {
+            @Override
+            public void onSuccessResponse(String data) {
+                textView.setText(data);
+            }
+
+            @Override
+            public void onErrorResponse(String data) {
+                textView.setText(data);
+            }
+        });
+
+//        // Instantiate the RequestQueue.
+//        RequestQueue queue = Volley.newRequestQueue(getContext());
+//        String url = "https://tv-zapping.herokuapp.com/v2/tv";
+//
+//// Request a string response from the provided URL.
+//        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+//                new Response.Listener<String>() {
+//                    @Override
+//                    public void onResponse(String response) {
+//                        // Display the first 500 characters of the response string.
+//                        textView.setText("Response is: " + response.substring(0, 500));
+//                    }
+//                }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//                textView.setText("That didn't work!");
+//            }
+//        });
+//
+//        // Add the request to the RequestQueue.
+//        queue.add(stringRequest);
     }
 }
