@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeHubAcademy">
-        <activity android:name=".ViewPagerActivity"></activity>
+        <activity android:name=".shared_preference.SharedPreferenceActivity"></activity>
+        <activity android:name=".ViewPagerActivity" />
         <activity android:name=".recyclerview.RecyclerActivity" />
         <activity android:name=".cource6.Main6Activity" />
         <activity

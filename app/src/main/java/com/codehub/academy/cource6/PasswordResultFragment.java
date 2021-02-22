@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.codehub.academy.R;
+import com.codehub.academy.cource6.response.JsonResponse;
 
 public class PasswordResultFragment extends Fragment {
 
@@ -51,8 +52,8 @@ public class PasswordResultFragment extends Fragment {
 
         viewModel.retrieveProgram(new TvProgramListener() {
             @Override
-            public void onSuccessResponse(String data) {
-                textView.setText(data);
+            public void onSuccessResponse(JsonResponse data) {
+                textView.setText(data.toString());
             }
 
             @Override

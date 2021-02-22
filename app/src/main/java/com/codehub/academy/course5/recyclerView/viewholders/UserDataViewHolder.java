@@ -17,7 +17,7 @@ public class UserDataViewHolder extends UserViewHolder {
 
     public void bind(UserModel userModel) {
 
-        TextView textView = itemView.findViewById(R.id.holder_title);
+        TextView textView = itemView.findViewById(R.id.holder_name);
         textView.setText(userModel.getFirstName() + " "+ userModel.getLastName());
 
         TextView textViewDesc = itemView.findViewById(R.id.holder_dec);

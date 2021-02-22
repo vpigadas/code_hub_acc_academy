@@ -4,7 +4,6 @@ import android.app.Application;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
-import androidx.lifecycle.ViewModel;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -12,6 +11,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.codehub.academy.cource6.response.JsonResponse;
+import com.google.gson.Gson;
 
 public class TvProgramViewModel extends AndroidViewModel {
     private final String url = "https://tv-zapping.herokuapp.com/v2/tv";
@@ -32,7 +33,13 @@ public class TvProgramViewModel extends AndroidViewModel {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        callback.onSuccessResponse(response);
+
+                        Gson gson = new Gson();
+
+                        JsonResponse response1 = gson.fromJson(response, JsonResponse.class);
+                        String strResponse = gson.toJson(response1);
+
+                        callback.onSuccessResponse(response1);
                         // Display the first 500 characters of the response string.
                         //textView.setText("Response is: " + response.substring(0, 500));
                     }
@@ -55,7 +62,7 @@ public class TvProgramViewModel extends AndroidViewModel {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        callback.onSuccessResponse(response);
+//                        callback.onSuccessResponse(response);
                         // Display the first 500 characters of the response string.
                         //textView.setText("Response is: " + response.substring(0, 500));
                     }

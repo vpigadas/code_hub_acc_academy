@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.codehub.academy.cource6.Main6Activity;
-import com.codehub.academy.course5.MainActivity;
+import com.codehub.academy.shared_preference.SharedPreferenceActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -50,7 +49,6 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity2.this, Main6Activity.class);
                 startActivity(intent);
-
             }
         });
 
@@ -74,7 +72,11 @@ public class MainActivity2 extends AppCompatActivity {
         btThree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buttonFunction();
+
+//                buttonFunction();
+
+                Intent intent = new Intent(MainActivity2.this, SharedPreferenceActivity.class);
+                startActivity(intent);
             }
         });
     }
