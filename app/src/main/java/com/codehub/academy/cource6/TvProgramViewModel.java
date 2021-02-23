@@ -14,6 +14,9 @@ import com.android.volley.toolbox.Volley;
 import com.codehub.academy.cource6.response.JsonResponse;
 import com.google.gson.Gson;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TvProgramViewModel extends AndroidViewModel {
     private final String url = "https://tv-zapping.herokuapp.com/v2/tv";
     private final String urlSport = "https://tv-zapping.herokuapp.com/v2/sport";

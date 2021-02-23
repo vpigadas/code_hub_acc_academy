@@ -2,6 +2,7 @@ package com.codehub.academy.shared_preference;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -16,6 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 import com.codehub.academy.R;
 
+import java.util.List;
+
 public class SharedPreferenceActivity extends AppCompatActivity {
 
     private SharedPreferences preferences;
@@ -28,6 +31,8 @@ public class SharedPreferenceActivity extends AppCompatActivity {
 
         preferences = this.getSharedPreferences("codehub-sharedpreferens", MODE_PRIVATE);
         //preferences = this.getPreferences(MODE_PRIVATE);
+
+
     }
 
     @Override
@@ -48,6 +53,21 @@ public class SharedPreferenceActivity extends AppCompatActivity {
 
         Glide.with(this).load("https://www.archaiologia.gr/wp-content/uploads/2018/03/Picasso_femme_au_Beret.jpg").into(imageView);
 //        Picasso.get().load("https://www.archaiologia.gr/wp-content/uploads/2018/03/Picasso_femme_au_Beret.jpg").into(imageView);
+
+        handleDatabase(counter);
+    }
+
+    private void handleDatabase(int counter) {
+
+        UserEntity entity = new UserEntity(counter, "Vassilis", 100, "blablabla");
+//        new UserEntityAsyncTask(getApplicationContext()).execute(entity);
+        new UserGetEntityAsyncTask(getApplicationContext(), new UserEntityListener() {
+            @Override
+            public void onSuccessResult(List<UserEntity> array) {
+                Log.d("Database", String.valueOf(array));
+            }
+        }).execute();
+        Log.d("Database", String.valueOf(entity));
     }
 
     @Override
