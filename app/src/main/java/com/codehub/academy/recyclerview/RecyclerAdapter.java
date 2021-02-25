@@ -13,22 +13,22 @@ import java.util.List;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<String> array;
+    private List<RecyclerModel> array;
 
-    public RecyclerAdapter(List<String> mockData) {
+    public RecyclerAdapter(List<RecyclerModel> mockData) {
         this.array = mockData;
     }
 
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.holder_card, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.holder_img_card, parent, false);
         return new RecyclerViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        Object object = array.get(position);
+        RecyclerModel object = array.get(position);
 
         if (holder instanceof RecyclerViewHolder) {
             RecyclerViewHolder recyclerViewHolder = (RecyclerViewHolder) holder;
