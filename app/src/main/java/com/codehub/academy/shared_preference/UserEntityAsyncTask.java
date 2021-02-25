@@ -6,23 +6,30 @@ import android.util.Log;
 
 import androidx.room.Room;
 
-public class UserEntityAsyncTask extends AsyncTask<UserEntity, UserEntity, Boolean> {
+public class UserEntityAsyncTask extends AsyncTask<UserEntity, UserEntity, Void> {
     UserDatabase userDatabase;
 
-    public UserEntityAsyncTask(Context context) {
-        userDatabase = Room.databaseBuilder(context, UserDatabase.class, "codehub-db").build();
+    public UserEntityAsyncTask(Context context,UserDatabase userDatabase) {
+        this.userDatabase = userDatabase;
     }
 
+
     @Override
-    protected Boolean doInBackground(UserEntity... entities) {
+    protected Void doInBackground(UserEntity... entities) {
         Log.d("Database", "Start");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         userDatabase.getUserDao().insert(entities);
         Log.d("Database", String.valueOf(entities));
-        return true;
+
+        return null;
     }
 
     @Override
-    protected void onPostExecute(Boolean aBoolean) {
+    protected void onPostExecute(Void aBoolean) {
         super.onPostExecute(aBoolean);
     }
 }

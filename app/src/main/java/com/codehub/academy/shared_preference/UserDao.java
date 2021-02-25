@@ -1,5 +1,6 @@
 package com.codehub.academy.shared_preference;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -23,6 +24,9 @@ public interface UserDao {
 
     @Query("SELECT * FROM userentity")
     List<UserEntity> getEntity();
+
+    @Query("SELECT * FROM userentity")
+    LiveData<List<UserEntity>> getEntityAsync();
 
     @Query("SELECT * FROM userentity LIMIT 1")
     UserEntity getFirstEntity();
